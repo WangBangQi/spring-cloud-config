@@ -1,0 +1,19 @@
+#服务提供者的端口号
+server:
+  port: 8013
+
+
+spring:
+  application:
+    #应用名称
+    name: service-a
+eureka:
+  instance:
+    #服务提供者的IP
+    hostname: 127.0.0.1
+    instance-id: http://${eureka.instance.hostname}:${server.port}
+    home-page-url: ${eureka.instance.instance-id}/index.html
+  client:
+    service-url:
+      #注册中心的地址
+      defaultZone: http://admin:123@localhost:8000/eureka/
