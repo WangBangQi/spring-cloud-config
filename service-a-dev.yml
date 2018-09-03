@@ -1,6 +1,6 @@
 #服务提供者的端口号
-server:
-  port: 8013
+# server:
+#   port: 8013
 
 
 spring:
